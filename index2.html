@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MID POINT CALCULATOR</title>
+    <style>
+        *{
+            background-color: rgb(240, 212, 212);
+
+        }
+        h1{
+            text-align: center;
+        }
+        .button{
+            background-color:blue;
+  border: none;
+  color:white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-inline-start: 600px;
+ }
+ .x1{
+    color: black;
+    padding: 10px 15px; 
+    text-align: center;
+    font-size: 15px;
+    background-color:white;
+    margin-inline-start: 600px;
+    
+ }
+ .x2{
+    color: black;
+    padding: 10px 15px;
+    text-align: center; 
+    font-size: 15px;
+    background-color:white;
+    margin-inline-start: 600px;
+ }
+ .y1{
+    color: black;
+    padding: 10px 15px;
+    text-align: center; 
+    font-size: 15px;
+    background-color:white;
+    margin-inline-start: 600px;
+ }
+ .y2{
+    color: black;
+    padding: 10px 15px;
+    text-align: center; 
+    font-size: 15px;
+    background-color:white;
+    margin-inline-start: 600px;
+ }
+ input{
+     text-align: center;
+ }
+    </style>
+    <script type="text/javascript">
+
+    function cal(){
+        var x1 = parseFloat(document.getElementById("x1").value);
+        var x2 = parseFloat(document.getElementById("x2").value);
+        var y1 = parseFloat(document.getElementById("y1").value);
+        var y2 = parseFloat(document.getElementById("y2").value);
+        var cal1= (x1+x2)/2 ;//+ "," + (y1+y2)/2);
+        var cal2 =  (y1+y2)/2;
+                
+        var usercal1 = document.getElementById("cal_index1")
+        usercal1.textContent = cal1.toFixed(1);
+        var usercal2 = document.getElementById("cal_index2")
+        usercal2.textContent = cal2.toFixed(1);
+
+        var usercal3 = document.getElementById("cal_index3")
+        usercal3.textContent = usercal1.textContent +" , "+usercal2.textContent;
+}
+    
+    </script>
+
+   
+</head>
+<body>
+    <h1>Midpoint Definition</h1>
+    <h2><p>The midpoint is sometimes refereed to as the centroid, 
+although this term is used more generally for other things that are the midpoint on a line. 
+The midpoint can also be calculated from the initial coordinates, slope, 
+and only one of the end coordinates in either the x or y direction.</p></h2>
+
+
+    <h1>MID POINT CALCULATOR</h1>
+    <input  required placeholder="x1" class="x1" type="number" id="x1"><br><br>
+    <input required placeholder="x2" class="x2" type="number" id="x2"><br><br>
+    <input required placeholder="y1" class="y1" type="number" id="y1"><br><br>
+    <input required placeholder="y2" class="y2" type="number" id="y2"><br><br>
+    
+    
+    <input type="button" class="button" value="calculate" onclick="cal()">
+
+    <h2 class="text-input">x coordinate = <b id="cal_index1"></b></h2>
+    <h2 class="text-input">y coordinate = <b id="cal_index2"></b></h2>
+
+    <h2 class="text-input">midpoint(x,y) = <b id="cal_index3" ></b></h2>
+
+    
+    
+</body>
+</html>
